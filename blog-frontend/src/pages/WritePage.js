@@ -3,6 +3,7 @@ import EditorContainer from '../containers/write/EditorContainer';
 import TagBoxContainer from '../containers/write/TagBoxContainer';
 import WriteActionButtonContainer from '../containers/write/WriteActionButtonContainer';
 import { Helmet } from 'react-helmet-async';
+import EditorContainer from '../containers/write/EditorContainer';
 
 const WritePage = () => {
   return (
@@ -12,7 +13,7 @@ const WritePage = () => {
       </Helmet>
       <EditorContainer/>
       <TagBoxContainer/>
-      <WriteActionButtonContainer/>
+      <WriteActionButtonsContainer/>
     </Responsive>
   );
 };
