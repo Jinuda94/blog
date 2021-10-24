@@ -40,11 +40,12 @@ export const updatePost = createAction(
   }),
 );
 
-// 사가 생성
+// saga 생성
 const writePostSaga = createRequestSaga(WRITE_POST, postsAPI.writePost);
 const updatePostSaga = createRequestSaga(UPDATE_POST, postsAPI.updatePost);
 
 export function* writeSaga() {
+  console.log('saga옴');
   yield takeLatest(WRITE_POST, writePostSaga);
   yield takeLatest(UPDATE_POST, updatePostSaga);
 }
@@ -84,7 +85,7 @@ const write = handleActions(
     [SET_ORIGINAL_POST]: (state, { payload: post }) => ({
       ...state,
       title: post.title,
-      body: post.body,                 
+      body: post.body,
       tags: post.tags,
       originalPostId: post._id,
     }),

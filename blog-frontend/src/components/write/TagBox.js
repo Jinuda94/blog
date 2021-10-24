@@ -6,6 +6,7 @@ const TagBoxBlock = styled.div`
   width: 100%;
   border-top: 1px solid ${palette.gray[2]};
   padding-top: 2rem;
+
   h4 {
     color: ${palette.gray[8]}
     margin-top: 0;
@@ -25,6 +26,7 @@ const TagForm = styled.form`
     border: none;
     font-size: 1rem;
   }
+
   input {
     padding: 0.5rem;
     flex: 1;

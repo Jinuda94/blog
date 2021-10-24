@@ -7,8 +7,8 @@ const PostListPage = () => {
   return (
     <>
       <HeaderContainer />
-      <PostListContainer/>
-      <PaginationContainer/>
+      <PostListContainer />
+      <PaginationContainer />
     </>
   );
 };

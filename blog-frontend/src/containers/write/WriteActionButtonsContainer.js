@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import WriteActionButtons from '../../components/write/WriteActionButtons';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -21,6 +21,7 @@ const WriteActionButtonsContainer = ({ history }) => {
   const onPublish = () => {
     if (originalPostId) {
       dispatch(updatePost({ title, body, tags, id: originalPostId }));
+      console.log('update옴');
       return;
     }
     dispatch(
@@ -40,6 +41,7 @@ const WriteActionButtonsContainer = ({ history }) => {
   // 성공 혹은 실패시 할 작업
   useEffect(() => {
     if (post) {
+      console.log('성공옴');
       const { _id, user } = post;
       history.push(`/@${user.username}/${_id}`);
     }

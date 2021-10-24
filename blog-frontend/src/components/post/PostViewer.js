@@ -9,7 +9,6 @@ import { Helmet } from 'react-helmet-async';
 const PostViewerBlock = styled(Responsive)`
   margin-top: 4rem;
 `;
-
 const PostHead = styled.div`
   border-bottom: 1px solid ${palette.gray[2]};
   padding-bottom: 3rem;
@@ -26,7 +25,7 @@ const PostContent = styled.div`
   color: ${palette.gray[8]};
 `;
 
-const PostViewer = ({ post, error, loading, actionButtons}) => {
+const PostViewer = ({ post, error, loading, actionButtons }) => {
   // 에러 발생 시
   if (error) {
     if (error.response && error.response.status === 404) {
@@ -41,12 +40,12 @@ const PostViewer = ({ post, error, loading, actionButtons}) => {
   }
 
   const { title, body, user, publishedDate, tags } = post;
-  
   return (
     <PostViewerBlock>
       <Helmet>
         <title>{title} - REACTERS</title>
       </Helmet>
+
       <PostHead>
         <h1>{title}</h1>
         <SubInfo
