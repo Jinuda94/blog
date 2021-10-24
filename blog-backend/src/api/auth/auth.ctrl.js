@@ -61,6 +61,8 @@ export const register = async ctx => {
   }
 */
 export const login = async ctx => {
+  console.log('login옴');
+  
 
   const { username, password } = ctx.request.body;
 
