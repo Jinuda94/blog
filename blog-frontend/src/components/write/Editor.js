@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import Quill from 'quill';
 import 'quill/dist/quill.bubble.css';
 import styled from 'styled-components';
@@ -74,6 +74,7 @@ const Editor = ({ title, body, onChangeField }) => {
       quillInstance.current.root.innerHTML = body;
   }, []); // eslint-disable-line
   */ 
+
 
   const onChangeTitle = e => {
     onChangeField({ key: 'title', value: e.target.value });
