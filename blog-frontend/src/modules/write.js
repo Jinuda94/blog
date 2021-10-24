@@ -84,7 +84,7 @@ const write = handleActions(
     [SET_ORIGINAL_POST]: (state, { payload: post }) => ({
       ...state,
       title: post.title,
-      body: post.body,
+      body: post.body,                 
       tags: post.tags,
       originalPostId: post._id,
     }),
